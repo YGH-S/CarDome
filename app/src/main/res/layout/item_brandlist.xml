@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="com.example.cardome.bean.BrandlistBean.ResultBean" />
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/bl_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="车系名称："/>
+
+        <TextView
+            android:id="@+id/bl_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bl_tv1"
+            android:textSize="16sp"
+            android:text="车辆类型："/>
+
+        <TextView
+            android:id="@+id/bl_tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bl_tv2"
+            android:textSize="16sp"
+            android:text="类型名称："/>
+
+        <TextView
+            android:id="@+id/bl_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/bl_tv1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="@{item.name}"
+            android:text=""/>
+
+        <TextView
+            android:id="@+id/bl_tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/bl_tv2"
+            android:layout_below="@id/bl_tv_name"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="@{item.levelname}"
+            android:text=""/>
+
+        <TextView
+            android:id="@+id/bl_tv_typename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/bl_tv3"
+            android:layout_below="@id/bl_tv_type"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="@{item.sname}"
+            android:text=""/>
+
+    </RelativeLayout>
+
+</layout>
